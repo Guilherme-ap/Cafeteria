@@ -1,10 +1,10 @@
 # Cafeteria
-Pizza ordering system, using Java, JavaWEB, JavaScript, HTML, CSS, jQuery, Bootstrap, Location API.
+cafeteria ordering system, using Java, JavaWEB, JavaScript, HTML, CSS, jQuery, Bootstrap, Location API.
 
 
 # Sistema de Cafeteria
 
-Este é um sistema de pizzaria que permite realizar pedidos, calcular frete, gerenciar produtos e usuários. Ele foi desenvolvido com o objetivo de fornecer uma solução completa para facilitar a gestão de uma Cafeteria, desde o registro de clientes até o processamento de pedidos.
+Este é um sistema de cafeteria que permite realizar pedidos, calcular frete, gerenciar produtos e usuários. Ele foi desenvolvido com o objetivo de fornecer uma solução completa para facilitar a gestão de uma Cafeteria, desde o registro de clientes até o processamento de pedidos.
 
 ## Características
 
