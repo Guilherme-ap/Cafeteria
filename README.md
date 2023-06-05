@@ -1,10 +1,10 @@
-# Pizzaria
+# Cafeteria
 Pizza ordering system, using Java, JavaWEB, JavaScript, HTML, CSS, jQuery, Bootstrap, Location API.
 
 
-# Sistema de Pizzaria
+# Sistema de Cafeteria
 
-Este é um sistema de pizzaria que permite realizar pedidos, calcular frete, gerenciar produtos e usuários. Ele foi desenvolvido com o objetivo de fornecer uma solução completa para facilitar a gestão de uma pizzaria, desde o registro de clientes até o processamento de pedidos.
+Este é um sistema de pizzaria que permite realizar pedidos, calcular frete, gerenciar produtos e usuários. Ele foi desenvolvido com o objetivo de fornecer uma solução completa para facilitar a gestão de uma Cafeteria, desde o registro de clientes até o processamento de pedidos.
 
 ## Características
 
@@ -25,7 +25,7 @@ O sistema possui uma interface amigável que foi projetada visando a usabilidade
 
 ## Tecnologias Utilizadas
 
-O sistema de pizzaria foi desenvolvido utilizando as seguintes tecnologias:
+O sistema de Cafeteria foi desenvolvido utilizando as seguintes tecnologias:
 
 - Linguagem de programação: Java,JavaScript e JavaWEB
 - Banco de dados: MySQL
