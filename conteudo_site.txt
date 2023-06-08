@@ -1,0 +1,31 @@
+Cabeçalho (home, login/cadastro, Comprar, Localização, Sobre nós)
+Main (Conteúdo das telas)
+Rodapé
+
+Telas:
+Tela de login
+Tela de cadastro
+Tela do delivery
+Tela de Localização das cafeterias
+Tela de Sobre nós (quem somos)
+Tela do Carrinho
+Tela de finalização de compra
+
+Conteúdo das telas:
+Tela de Login --> Formulário para email e senha e link de "esqueci minha senha"
+
+Tela de Cadastro --> Formulário para cadastrar o usuário no site. O Formulário vai conter os campos para 
+Email, Nome, Número celular, endereço, cpf e senha
+
+Tela de entrega --> vai conter os itens que a cafeteria dispor para os clientes comprarem, com o botão
+de comprar em cada item, e e ao clicar, vai ser adicionado ao carrinho.
+
+Tela de localização das cafeterias --> Endereço de todas as cafeterias, com suas respectivas fotos.
+
+Tela de Sobre nós --> vai conter a apresentação da cafeteria, bem como fundador, valores e missão. 
+
+Tela do Carrinho --> todos os itens que foram adicionados a compra e o botão de finalizar compra
+
+Tela de finalização de compra --> Tela que apresenta o valor final da compra e a confirmação do endereço de entrega, bem como a forma de pagamento.
+
+
