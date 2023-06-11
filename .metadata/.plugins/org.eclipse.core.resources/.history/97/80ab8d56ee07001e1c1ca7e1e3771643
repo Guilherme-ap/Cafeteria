@@ -1,0 +1,105 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="ISO-8859-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafeteria Delícia</title>
+  <style>
+    /* Estilos CSS para a página */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #F8F8F8;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      font-size: 36px;
+      margin: 0;
+    }
+
+    nav {
+      background-color: #333;
+      color: #FFF;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #FFF;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    section {
+      padding: 40px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #333;
+      color: #FFF;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  
+
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#cardapio">Cardápio</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section id="sobre">
+    <h2>Sobre Nós</h2>
+    <p>Bem-vindo à Cafeteria Delícia, onde servimos os melhores cafés e delícias frescas. Nosso ambiente acolhedor e
+      nossos
+      produtos de alta qualidade garantem uma experiência única para os amantes de café.</p>
+  </section>
+
+  <section id="cardapio">
+    <h2>Cardápio</h2>
+    <p>Confira nossas opções deliciosas:</p>
+    <ul>
+      <li>Café expresso</li>
+      <li>Cappuccino</li>
+      <li>Latte</li>
+      <li>Bolo de chocolate</li>
+      <li>Torta de maçã</li>
+      <li>Pão de queijo</li>
+    </ul>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Estamos ansiosos para atendê-lo. Entre em contato conosco:</p>
+    <ul>
+      <li>Telefone: (XX) XXXX-XXXX</li>
+      <li>Email: contato@cafeteriadelicia.com</li>
+      <li>Endereço: Rua dos Cafés, 123 - Cidade, Estado</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Cafeteria Delícia. Todos os direitos reservados.</p>
+  </footer>
+</body>
+
+</html>
