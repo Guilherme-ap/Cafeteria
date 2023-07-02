@@ -1,0 +1,20 @@
+package Model.testes;
+import Controller.UsuarioController;
+import Model.Usuario;
+
+public class TestCadastar {
+    public static void main(String[] args) {
+       
+        Usuario usuario = new Usuario(null, null, null, null, null);
+        usuario.setNome("Lorrayne");
+        usuario.setTelefone("7077070");
+        usuario.setEmail("lola@kiki.com");
+        usuario.setSenha("kiki");
+        usuario.setEndereco("Rua aracilia, 123");
+        
+  
+        UsuarioController.criarUsuario(usuario);
+
+        System.out.println("Usuário criado com sucesso!");
+    }
+}

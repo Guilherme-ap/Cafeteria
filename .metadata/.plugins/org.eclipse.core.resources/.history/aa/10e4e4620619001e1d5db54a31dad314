@@ -1,0 +1,35 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page import="Controller.UsuarioController" %>
+<jsp:useBean id="u" class="Model.Usuario"></jsp:useBean>
+<jsp:setProperty property="*" name="u"/>
+
+
+<%
+	
+
+ //if(i > 0 ){
+//	 response.sendRedirect("Home.jsp");
+ //}else{
+//	 response.sendRedirect("Cadastro.jsp");
+// }
+ 
+  String nome = request.getParameter("nome");
+  String telefone = request.getParameter("telefone");
+  String email = request.getParameter("email");
+  String senha = request.getParameter("senha");
+  String endereco = request.getParameter("endereco");
+
+ out.println(nome + telefone + email + senha + endereco);
+ 
+
+ u.setNome(nome);
+ u.setTelefone(telefone);
+ u.setEmail(email);
+ u.setSenha(senha);
+ u.setEndereco(endereco);
+ 
+ int i = UsuarioController.criarUsuario(u);
+ 
+ out.println("Valor de i: " + i);
+
+%>

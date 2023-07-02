@@ -1,0 +1,23 @@
+package Model.testes;
+import Model.UsuarioDAO;
+import Model.Usuario;
+
+public class UsuarioDAOTest {
+    public static void main(String[] args) {
+        // Cria um objeto Usuario para testar
+        Usuario usuario = new Usuario();
+        usuario.setNome("Fulano");
+        usuario.setTelefone("123456789");
+        usuario.setEmail("fulano@example.com");
+        usuario.setSenha("senha123");
+        usuario.setEndereco("Rua Exemplo, 123");
+
+        // Cria um objeto UsuarioDAO
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
+
+        // Chama o método criarUsuario para inserir o usuário no banco de dados
+        usuarioDAO.criarUsuario(usuario);
+
+        System.out.println("Usuário criado com sucesso!");
+    }
+}

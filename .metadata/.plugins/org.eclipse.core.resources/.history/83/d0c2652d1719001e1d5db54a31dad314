@@ -1,0 +1,60 @@
+package Controller;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+
+import javax.servlet.annotation.WebServlet;
+
+import java.util.ArrayList;
+import Model.Usuario;
+
+@WebServlet(urlPatterns = "/cadastrar")
+public class UsuarioController {
+	
+
+	public static Connection getConnection() {
+	    Connection conn = null;
+	    String URL = "jdbc:mysql://localhost:3306/cafeteria";
+	    String USUARIO = "root";
+	    String SENHA = "admin";
+
+	    try {
+	        conn = DriverManager.getConnection(URL, USUARIO, SENHA);
+	    } catch (SQLException e) {
+	       System.out.println(e);
+	    }
+
+	    return conn;
+	}
+
+    	
+    	
+    	
+    
+    public static int criarUsuario(Usuario usuario, String nome, String telefone, String email, String senha, String endereco) {
+        int status = 0;
+
+   
+            try {
+            	 Connection conn = getConnection();
+            	 String sql = "INSERT INTO usuarios (nome, telefone, email, senha, endereco) VALUES (?, ?, ?, ?, ?)";
+                 PreparedStatement ps  = (PreparedStatement) conn.prepareStatement(sql);
+                 ps.setString(1, usuario.getNome());
+                 ps.setString(2, usuario.getTelefone());
+                 ps.setString(3, usuario.getEmail());
+                 ps.setString(4, usuario.getSenha());
+                 ps.setString(5, usuario.getEndereco());
+                 status = ps.executeUpdate();
+           
+            }catch (Exception e) {
+             System.out.println(e);
+            }
+            
+            return status;
+              
+}
+}

@@ -1,0 +1,5 @@
+package Model.testes;
+
+public class UsuarioDAOTest {
+
+}

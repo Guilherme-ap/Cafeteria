@@ -1,0 +1,19 @@
+1688312063253	Rename resource 'forms'
+1688312181100	Rename resource 'cadastro.jsp'
+1688313875231	Delete element
+1688313892256	Rename type 'UsuarioDAOTest'
+1688316574716	Move 'cadastrar.jsp' to 'View'
+1688318114932	Rename package 'Model.testes'
+1688318336570	Rename compilation unit 'TestCadastar.java'
+1688318730017	Delete element
+1688320019617	Delete element
+1688322736675	Encapsulate field 'id'
+1688328547402	Delete element
+1688330575808	Rename compilation unit 'package-info.java'
+1688330716540	Delete element
+1688331073244	Rename resource 'cadastrar.jsp'
+1688331249091	Delete element
+1688332658269	Rename compilation unit 'CadastrarServlet.java'
+1688333625696	Delete element
+1688334881833	Delete element
+1688334907984	Delete element

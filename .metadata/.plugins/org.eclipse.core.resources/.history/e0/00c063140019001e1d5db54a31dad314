@@ -1,0 +1,88 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+ 
+<jsp:include page="Header.jsp" />
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      background-image: url("https://i.pinimg.com/originals/81/b2/34/81b234e6d4a79f243357e9f0d928135e.png");
+      background-size: cover;
+      background-position: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .login-container {
+      margin-top: 100px;
+    }
+
+    .custom-btn {
+      background-color: #ffffff;
+      border-color: #000000;
+      color: #000000;
+    }
+
+    .login-form {
+      background-color: rgba(255, 255, 255, 1);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-form h2 {
+      margin-bottom: 30px;
+    }
+
+    .login-form .form-control {
+      border-radius: 2px;
+    }
+
+    .login-form .btn {
+      border-radius: 20px;
+      transition: all 0.5s;
+    }
+
+    .login-form .btn:hover {
+      transform: scale(1.05);
+      background-color: black;
+    }
+
+    .login-form .btn-block {
+      text-transform: uppercase;
+    }
+
+    .login-form .remember-checkbox {
+      margin-top: 10px;
+    }
+
+    .login-form .forgot-password {
+      text-align: right;
+      margin-top: 10px;
+    }
+
+    .login-form .forgot-password a {
+      color: #777777;
+    }
+  </style>
+  <script>
+    $(document).ready(function() {
+      $(".login-form").hide().fadeIn(2000);
+    });
+  </script>
+</head>
+
+
+<body>
+ <jsp:include page="Formulario.html"><jsp:include>
+  
+</body>
+
+</html>

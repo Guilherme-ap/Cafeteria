@@ -1,0 +1,22 @@
+package Model.testes;
+import Model.UsuarioDAO;
+import Model.Usuario;
+
+public class UsuarioDAOTest {
+    public static void main(String[] args) {
+       
+        Usuario usuario = new Usuario();
+        usuario.setNome("Guilherme");
+        usuario.setTelefone("11910576589");
+        usuario.setEmail("guilherme@kiki.com");
+        usuario.setSenha("kiki");
+        usuario.setEndereco("Rua aracilia, 123");
+
+  
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
+       
+        usuarioDAO.criarUsuario(usuario);
+
+        System.out.println("Usuário criado com sucesso!");
+    }
+}

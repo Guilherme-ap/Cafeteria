@@ -1,0 +1,29 @@
+
+
+
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="Model.Usuario" %>
+<%@ page import="Controller.UsuarioController" %>
+
+<%
+    String nome = request.getParameter("nome");
+    String telefone = request.getParameter("telefone");
+    String email = request.getParameter("email");
+    String senha = request.getParameter("senha");
+    String endereco = request.getParameter("endereco");
+
+    Usuario usuario = new Usuario();
+    usuario.setNome(nome);
+    usuario.setTelefone(telefone);
+    usuario.setEmail(email);
+    usuario.setSenha(senha);
+    usuario.setEndereco(endereco);
+
+    int status = UsuarioController.criarUsuario(usuario);
+
+    if (status > 0) {
+        response.sendRedirect("Home.jsp");
+    } else {
+        response.sendRedirect("Cadastro.jsp");
+    }
+%>

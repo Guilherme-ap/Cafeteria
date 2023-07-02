@@ -1,0 +1,14 @@
+package com.servlets;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class CadastrarServletTest {
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
+}

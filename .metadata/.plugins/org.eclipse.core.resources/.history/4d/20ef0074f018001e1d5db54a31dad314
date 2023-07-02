@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page import="Controller.UsuarioController" %>
+<%@page  import="Controller.UsuarioController" %>
+<jsp:setProperty property="*" name="u"/>
+
+
+<%
+	int i = UsuarioController.cadastrarUsuario(Usuario usuario);
+
+ if(i > 0 ){
+	 response.sendRedirect("Home.jsp");
+ }else{
+	 response.sendRedirect("Cadastro.jsp");
+ }
+
+%>
