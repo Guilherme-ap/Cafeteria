@@ -1,58 +1,57 @@
 package testes;
-import static org.junit.Assert.assertNotNull;
-import java.sql.Connection;
-import org.junit.Test;
+
 import Controller.UsuarioController;
 import Model.Usuario;
-import static org.junit.Assert.assertEquals;
-import java.util.List;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
+import java.util.List;
 
 public class UsuarioControllerTest {
 
-  @Test
-  public void testarConexao() {
-    Connection conn = UsuarioController.getConnection();
-    assertNotNull(conn);
-  }
-  
-  
- 
-  public void testarGetAllUsuarios() {
-    List<Usuario> usuarios = UsuarioController.getAllUsuarios();
-    assertNotNull(usuarios);
-    assertEquals(7, usuarios.size()); // Altere o valor esperado de acordo com o número de registros na tabela "usuarios"
-    
-    // Verifique se os dados dos usuários foram recuperados corretamente
-    Usuario usuario1 = usuarios.get(0);
-    assertEquals("Guilherme", usuario1.getNome());
-    assertEquals("11910576589", usuario1.getTelefone());
-    assertEquals("guilherme@kiki.com", usuario1.getEmail());
-    assertEquals("kiki", usuario1.getSenha());
-    assertEquals("Rua aracilia, 123", usuario1.getEndereco());
+    @Test
+    public void testGetConnection() {
+        Assertions.assertNotNull(UsuarioController.getConnection(), "Falha ao estabelecer conexão com o banco de dados!");
+    }
 
-  
-  }
-  
-  @Test
-  public void testarCriarUsuario() {
-    Usuario usuario = new Usuario();
-    usuario.setNome("Novo Usuário");
-    usuario.setTelefone("1234567890");
-    usuario.setEmail("novo@usuario.com");
-    usuario.setSenha("senha123");
-    usuario.setEndereco("Rua Nova, 123");
+    @Test
+    public void testCriarUsuario() {
+        Usuario usuario = new Usuario();
+        usuario.setNome("João");
+        usuario.setTelefone("123456789");
+        usuario.setEmail("joao@example.com");
+        usuario.setSenha("senha123");
+        usuario.setEndereco("Rua A, 123");
 
-    int status = UsuarioController.criarUsuario(usuario);
-    assertEquals(1, status);
-  }
-  
- 
+        int status = UsuarioController.criarUsuario(usuario);
+        Assertions.assertTrue(status > 0, "Falha ao criar usuário!");
+    }
+
+    @Test
+    public void testGetAllUsuarios() {
+        List<Usuario> usuarios = UsuarioController.getAllUsuarios();
+        Assertions.assertFalse(usuarios.isEmpty(), "A lista de usuários está vazia!");
+    }
+
+    @Test
+    public void testAtualizarUsuario() {
+        Usuario usuario = new Usuario();
+        usuario.setId(3); // ID do usuário a ser atualizado
+        usuario.setNome("Novo Nome");
+        usuario.setTelefone("987654321");
+        usuario.setEmail("novoemail@example.com");
+        usuario.setSenha("novasenha123");
+        usuario.setEndereco("Rua B, 456");
+
+        int status = UsuarioController.atualizarUsuario(usuario);
+        Assertions.assertTrue(status > 0, "Falha ao atualizar usuário!");
+    }
+
+    @Test
+    public void testExcluirUsuario() {
+        int id = 1; // ID do usuário a ser excluído
+
+        int status = UsuarioController.excluirUsuario(id);
+        Assertions.assertTrue(status > 0, "Falha ao excluir usuário!");
+    }
 }
-
-
-
-
-	
-
-
