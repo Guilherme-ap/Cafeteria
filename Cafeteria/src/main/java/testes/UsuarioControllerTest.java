@@ -49,7 +49,7 @@ public class UsuarioControllerTest {
 
     @Test
     public void testExcluirUsuario() {
-        int id = 1; // ID do usuário a ser excluído
+        int id = 16; // ID do usuário a ser excluído
 
         int status = UsuarioController.excluirUsuario(id);
         Assertions.assertTrue(status > 0, "Falha ao excluir usuário!");

@@ -19,6 +19,7 @@
       background-position: center;
       backdrop-filter: blur(10px);
     }
+    
 
     .login-container {
       margin-top: 100px;
@@ -83,7 +84,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-6 login-container">
-        <form class="login-form" action="/cadastrar" method="POST">
+        <form class="login-form"  method="POST">
           <h2>Cadastro</h2>
           <div class="form-group">
             <label for="nome">Nome</label>
@@ -105,16 +106,21 @@
             <label for="endereco">Endereço</label>
             <input type="text" class="form-control"   name="endereco"  placeholder="Digite seu endereço" required>
           </div>
-          <button type="submit" class="btn btn-primary custom-btn" value="cadastrar">Cadastrar</button>
+          <button type="submit" class="btn btn-primary custom-btn" id="cadastrar" value="cadastrar">Cadastrar</button>
           <p style="margin-top:20px;">Já tem uma conta? <a href="login.jsp">Faça login</a></p>
         </form>
         <div class="text-center mt-3">
      
+          
      
         </div>
       </div>
     </div>
   </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/JS/CadastrarJson.js"></script>
+  
 </body>
 
 </html>

@@ -53,6 +53,13 @@
       background-color: #f8f9fa;
     }
     
+ 
+ #map {
+            height: 400px;
+            margin-bottom: 20px;
+        }
+
+   
    
   </style>
 </head>
@@ -77,7 +84,7 @@
       <a class=" btn nav-link text-dark" href="Sobre.jsp">Nosso café</a>
     </li>
   </ul>
-   <% if (currentPage.equals("Login.jsp") || currentPage.equals("Cadastro.jsp")) { %>
+   <% if (currentPage.equals("Login.jsp") || currentPage.equals("Cadastro.jsp") || currentPage.equals("User.jsp") || currentPage.equals("Pagamento.jsp")) { %>
      
     <% } else { %>
       <ul class="navbar-nav ml-auto">

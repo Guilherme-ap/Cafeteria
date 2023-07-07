@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Exemplo Mapbox - Busca de Rotas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
+  <style>
+    body { margin: 0; padding: 0; }
+    #map { height: 400px; }
+  </style>
+</head>
+<body>
+<div id="map"></div>
+<input type="text" id="endereco" placeholder="Digite o endereço">
+<button onclick="calcularFrete()">Calcular Frete</button>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZ3VpYXBsIiwiYSI6ImNsamN3Y2xiZzF1YTgzZ3BrZmN4NG1na3gifQ.Ly05MCy9o3eVpXxpzAlSkg';
+
+   var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [-46.6348, -23.5505], // Coordenadas de São Paulo, Brasil
+    zoom: 12
+  });
+
+  map.addControl(new mapboxgl.NavigationControl());
+
+  var marker1 = new mapboxgl.Marker({ draggable: false }) // Localização fixa
+     .setLngLat([-46.5342, -23.4532]) // Coordenadas da Rua Guilhermino de Lima, São Paulo
+    .addTo(map);
+
+  var marker2 = new mapboxgl.Marker({ draggable: true })
+    .setLngLat([-46.6239, -23.5505]) // Coordenadas iniciais para o segundo marcador (pode ser alterado pelo usuário)
+    .addTo(map);
+
+  function calculateDistance() {
+    var coordinates1 = marker1.getLngLat();
+    var coordinates2 = marker2.getLngLat();
+
+    var url = 'https://api.mapbox.com/directions/v5/mapbox/driving/' +
+      coordinates1.lng + ',' + coordinates1.lat + ';' +
+      coordinates2.lng + ',' + coordinates2.lat +
+      '?access_token=' + mapboxgl.accessToken;
+
+   fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        var distance = data.routes[0].distance;
+        var duration = data.routes[0].duration;
+
+        var freightCost = 0; // Valor base do frete
+        var extraKilometers = Math.ceil((distance - 3000) / 1000); // Calcula os quilômetros extras em relação aos 3000m
+        var additionalCost = extraKilometers * 3; // Calcula o custo adicional baseado nos quilômetros extras
+
+        if (additionalCost > 0) {
+          freightCost += additionalCost;
+        }
+
+	if (distance <= 3000){
+		alert('Distância: ' + distance + ' metros\nValor do Frete: Frete Grátis');
+     }else{
+	alert('Distância: ' + distance + ' metros\nValor do Frete: R$' + freightCost.toFixed(2));
+	}
+
+        
+      })
+      .catch(err => {
+        console.log(err);
+        alert('Ocorreu um erro ao calcular a distância.');
+      });
+  }
+
+
+function calcularFrete() {
+  var endereco = document.getElementById('endereco').value;
+
+  // Requisição para a API de geocodificação
+  fetch('https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(endereco) + '.json?access_token=' + mapboxgl.accessToken)
+    .then(response => response.json())
+    .then(data => {
+      if (data.features.length > 0) {
+        var coordinates = data.features[0].geometry.coordinates;
+
+        var marker1Coordinates = marker1.getLngLat();
+        var marker2Coordinates = marker2.getLngLat();
+
+        // Calcula a distância entre os pontos
+        var distance = turf.distance(
+          turf.point(marker1Coordinates.toArray()),
+          turf.point(marker2Coordinates.toArray())
+        );
+
+        var freightCost = 0; // Valor inicial do frete é 0
+        if (distance > 3000) {
+          var extraKilometers = Math.ceil((distance - 3000) / 1000); // Calcula os quilômetros extras em relação aos 3000m
+          var additionalCost = extraKilometers * 3; // Calcula o custo adicional baseado nos quilômetros extras
+          freightCost = 8 + additionalCost; // Valor base do frete mais o custo adicional
+        }
+
+        alert('Distância: ' + distance + ' metros\nValor do Frete: R$' + freightCost.toFixed(2));
+      } else {
+        alert('Endereço não encontrado.');
+      }
+    })
+    .catch(err => {
+      console.log(err);
+      alert('Ocorreu um erro ao obter as coordenadas do endereço.');
+    });
+}
+
+  marker2.on('dragend', calculateDistance);
+</script>
+
+</body>
+</html>

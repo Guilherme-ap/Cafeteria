@@ -85,6 +85,10 @@
 
   <div class="container" style="margin-top: 20px;">
     <h2>Menu</h2>
+ 
+     <i class="fas fa-shopping-cart"></i>
+      <span id="cart-count" class="badge">0</span>
+  
     <div class="container" style="margin-top: 40px;">
         <hr style="background-color: black;">
         <div class="row text-center">
@@ -117,7 +121,10 @@
         <h5 class="card-title">Café Expresso</h5>
         <p class="card-text">Café puro, forte e encorpado.</p>
         <p class="card-text">Preço: R$ 5,00</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+         <div class="form-group">
+              <input type="number" id="quantity-expresso" class="form-control" value="1">
+            </div>
+        <a class="btn btn-primary add-btn" data-index="1">>Comprar</a>
       </div>
     </div>
   </div>
@@ -127,8 +134,12 @@
       <div class="card-body">
         <h5 class="card-title">Café Latte</h5>
         <p class="card-text">Café com leite cremoso e suave.</p>
+        
         <p class="card-text">Preço: R$ 7,50</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+        <div class="form-group">
+              <input type="number" id="quantity-latte" class="form-control" value="1">
+            </div>
+         <a class="btn btn-primary add-btn" data-index="2">>Comprar</a>
       </div>
     </div>
   </div>
@@ -139,7 +150,10 @@
         <h5 class="card-title">Café Mocha</h5>
         <p class="card-text">Café com chocolate e creme de leite.</p>
         <p class="card-text">Preço: R$ 6,50</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+        <div class="form-group">
+              <input type="number" id="quantity-cappuccino" class="form-control" value="1">
+            </div>
+        <a class="btn btn-primary add-btn" data-index="3">>Comprar</a>
       </div>
     </div>
   </div>
@@ -153,7 +167,10 @@
         <h5 class="card-title">Café Cappuccino</h5>
         <p class="card-text">Café com leite vaporizado e espuma de leite.</p>
         <p class="card-text">Preço: R$ 8,00</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+        <div class="form-group">
+              <input type="number" id="quantity-latte" class="form-control" value="1">
+            </div>
+       <a class="btn btn-primary add-btn" data-index="3">>Comprar</a>
       </div>
     </div>
   </div>
@@ -164,7 +181,10 @@
         <h5 class="card-title">Café Frappuccino</h5>
         <p class="card-text">Café gelado com leite e cobertura de chantilly.</p>
         <p class="card-text">Preço: R$ 9,50</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+        <div class="form-group">
+              <input type="number" id="quantity-latte" class="form-control" value="1">
+            </div>
+        <a class="btn btn-primary add-btn" data-index="3">>Comprar</a>
       </div>
     </div>
   </div>
@@ -175,7 +195,10 @@
         <h5 class="card-title">Café Macchiato</h5>
         <p class="card-text">Café com uma pequena quantidade de leite vaporizado.</p>
         <p class="card-text">Preço: R$ 6,00</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+        <div class="form-group">
+              <input type="number" id="quantity-latte" class="form-control" value="1">
+            </div>
+         <a class="btn btn-primary add-btn" data-index="3">>Comprar</a>
       </div>
     </div>
   </div>
@@ -192,7 +215,10 @@
         <h5 class="card-title">Café Gelado Tradicional</h5>
         <p class="card-text">Café gelado refrescante.</p>
         <p class="card-text">Preço: R$ 8,00</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+        <div class="form-group">
+              <input type="number" id="quantity-latte" class="form-control" value="1">
+            </div>
+        <a class="btn btn-primary add-btn" data-index="3">>Comprar</a>
       </div>
     </div>
   </div>
@@ -203,7 +229,10 @@
         <h5 class="card-title">Café Gelado com Caramelo</h5>
         <p class="card-text">Café gelado com calda de caramelo.</p>
         <p class="card-text">Preço: R$ 9,50</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+        <div class="form-group">
+              <input type="number" id="quantity-latte" class="form-control" value="1">
+            </div>
+       <a class="btn btn-primary add-btn" data-index="3">>Comprar</a>
       </div>
     </div>
   </div>
@@ -214,7 +243,10 @@
         <h5 class="card-title">Café Gelado com Chocolate</h5>
         <p class="card-text">Café gelado com cobertura de chocolate.</p>
         <p class="card-text">Preço: R$ 7,50</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+        <div class="form-group">
+              <input type="number" id="quantity-latte" class="form-control" value="1">
+            </div>
+        <a class="btn btn-primary add-btn" data-index="3">>Comprar</a>
       </div>
     </div>
   </div>
@@ -233,7 +265,7 @@
         <h5 class="card-title">Cappuccino Tradicional</h5>
         <p class="card-text">Cappuccino clássico com café, leite vaporizado e espuma de leite.</p>
         <p class="card-text">Preço: R$ 10,00</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+        <a class="btn btn-primary add-btn" data-index="3">>Comprar</a>
       </div>
     </div>
   </div>
@@ -244,7 +276,10 @@
         <h5 class="card-title">Cappuccino de Chocolate</h5>
         <p class="card-text">Cappuccino com sabor de chocolate e cobertura de chantilly.</p>
         <p class="card-text">Preço: R$ 12,50</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+        <div class="form-group">
+              <input type="number" id="quantity-latte" class="form-control" value="1">
+            </div>
+        <a class="btn btn-primary add-btn" data-index="3">>Comprar</a>
       </div>
     </div>
   </div>
@@ -255,7 +290,10 @@
         <h5 class="card-title">Cappuccino Caramelado</h5>
         <p class="card-text">Cappuccino com toque de caramelo e chantilly.</p>
         <p class="card-text">Preço: R$ 11,00</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+        <div class="form-group">
+              <input type="number" id="quantity-latte" class="form-control" value="1">
+            </div>
+       <a class="btn btn-primary add-btn" data-index="3">>Comprar</a>
       </div>
     </div>
   </div>
@@ -276,7 +314,10 @@
         <h5 class="card-title">Hambúrguer Clássico</h5>
         <p class="card-text">Pão, hambúrguer de carne, queijo, alface e tomate.</p>
         <p class="card-text">Preço: R$ 15,00</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+        <div class="form-group">
+              <input type="number" id="quantity-latte" class="form-control" value="1">
+            </div>
+        <a class="btn btn-primary add-btn" data-index="3">>Comprar</a>
       </div>
     </div>
   </div>
@@ -287,7 +328,10 @@
         <h5 class="card-title">Sanduíche Vegetariano</h5>
         <p class="card-text">Pão integral, alface, tomate, cenoura, queijo e molho especial.</p>
         <p class="card-text">Preço: R$ 12,50</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+        <div class="form-group">
+              <input type="number" id="quantity-latte" class="form-control" value="1">
+            </div>
+        <a class="btn btn-primary add-btn" data-index="3">>Comprar</a>
       </div>
     </div>
   </div>
@@ -298,7 +342,10 @@
         <h5 class="card-title">Wrap de Frango</h5>
         <p class="card-text">Tortilha de trigo, frango grelhado, alface, tomate e maionese.</p>
         <p class="card-text">Preço: R$ 13,00</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+        <div class="form-group">
+              <input type="number" id="quantity-latte" class="form-control" value="1">
+            </div>
+        <a class="btn btn-primary add-btn" data-index="3">>Comprar</a>
       </div>
     </div>
   </div>
@@ -309,7 +356,10 @@
         <h5 class="card-title">Panini Caprese</h5>
         <p class="card-text">Pão italiano, queijo mozarela, tomate, manjericão e azeite.</p>
         <p class="card-text">Preço: R$ 11,50</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+        <div class="form-group">
+              <input type="number" id="quantity-latte" class="form-control" value="1">
+            </div>
+         <a class="btn btn-primary add-btn" data-index="3">>Comprar</a>
       </div>
     </div>
   </div>
@@ -320,17 +370,313 @@
         <h5 class="card-title">Club Sandwich</h5>
         <p class="card-text">Pão de forma, frango grelhado, bacon, alface, tomate e maionese.</p>
         <p class="card-text">Preço: R$ 14,00</p>
-        <a href="#" class="btn btn-primary">Comprar</a>
+        <div class="form-group">
+              <input type="number" id="quantity-latte" class="form-control" value="1">
+            </div>
+        <a class="btn btn-primary add-btn" data-index="3">>Comprar</a>
       </div>
     </div>
   </div>
 </div>
+</div>
+<div id="cart" style="margin-top: 20px;">
+  <h2>Carrinho de Compras</h2>
+  <ul id="cart-items"></ul>
+  <p>Total: R$ <span id="cart-total">0.00</span></p>
+</div>
 
 
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
-          
+<script>
+    $(document).ready(function() {
+      var cartItems = [];
+      var cartCount = 0;
+      var itemList = [
+        { name: 'Café Expresso', price: 5.00 },
+        { name: 'Café Latte', price: 7.50 },
+        { name: 'Café Mocha', price: 6.50 },
+        { name: 'Café Cappuccino', price: 8.00 },
+      ];
 
-  </div>
+      function updateCart() {
+        $('#cart-items').empty();
+        var total = 0;
+
+        for (var i = 0; i < cartItems.length; i++) {
+          var item = cartItems[i];
+          var subtotal = item.price * item.quantity;
+          total += subtotal;
+
+          var row = '<tr>';
+          row += '<td>' + item.product + '</td>';
+          row += '<td>R$' + item.price.toFixed(2) + '</td>';
+          row += '<td>' + item.quantity + '</td>';
+          row += '<td><button class="btn btn-danger btn-sm remove-btn" data-index="' + i + '">Remover</button></td>';
+          row += '</tr>';
+
+          $('#cart-items').append(row);
+        }
+
+        $('#total').text('Total: R$' + total.toFixed(2));
+      }
+
+      function updateCartCount() {
+        $('#cart-count').text(cartCount);
+      }
+
+      function addItemToCart(product, price, quantity) {
+        var newItem = {
+          product: product,
+          price: price,
+          quantity: quantity
+        };
+
+        cartItems.push(newItem);
+        cartCount += quantity;
+
+        updateCart();
+        updateCartCount();
+      }
+
+      for (var i = 0; i < itemList.length; i++) {
+        var item = itemList[i];
+
+        var card = '<div class="col-md-3">';
+        card += '<div class="card">';
+        card += '<div class="card-body">';
+        card += '<h5 class="card-title">' + item.name + '</h5>';
+        card += '<p class="card-text">R$' + item.price.toFixed(2) + '</p>';
+        card += '<div class="form-group">';
+        card += '<input type="number" id="quantity-' + i + '" class="form-control" value="1">';
+        card += '</div>';
+        card += '<button class="btn btn-primary add-btn" data-index="' + i + '">Comprar</button>';
+        card += '</div>';
+        card += '</div>';
+        card += '</div>';
+
+        $('#item-list').append(card);
+      }
+
+      $(document).on('click', '.add-btn', function() {
+        var index = $(this).data('index');
+        var quantity = parseInt($('#quantity-' + index).val());
+
+        if (quantity && quantity > 0) {
+          var item = itemList[index];
+          addItemToCart(item.name, item.price, quantity);
+          $('#quantity-' + index).val('1');
+        }
+      });
+
+      $(document).on('click', '.remove-btn', function() {
+        var index = $(this).data('index');
+        var item = cartItems[index];
+        cartCount -= item.quantity;
+        cartItems.splice(index, 1);
+        updateCart();
+        updateCartCount();
+      });
+
+      $(document).on('click', '#checkout-btn', function() {
+        var total = 0;
+
+        for (var i = 0; i < cartItems.length; i++) {
+          var item = cartItems[i];
+          var subtotal = item.price * item.quantity;
+          total += subtotal;
+        }
+
+        var expirationDate = new Date();
+        expirationDate.setFullYear(expirationDate.getFullYear() + 1);
+
+        document.cookie = 'total=' + total.toFixed(2) + '; expires=' + expirationDate.toUTCString() + '; path=/';
+
+        alert('Pedido realizado! Total: R$' + total.toFixed(2));
+      });
+    });
+  </script>
+  <script>
+  // Função para adicionar um item ao carrinho
+  function addToCart(itemIndex) {
+    var item;
+    switch (itemIndex) {
+      case 1:
+        item = {
+          name: 'Café Expresso',
+          price: 5.00
+        };
+        break;
+      case 2:
+        item = {
+          name: 'Café Latte',
+          price: 7.50
+        };
+        break;
+      case 3:
+        item = {
+          name: 'Café Mocha',
+          price: 6.50
+        };
+        break;
+      case 4:
+        item = {
+          name: 'Café Cappuccino',
+          price: 8.00
+        };
+        break;
+      case 5:
+        item = {
+          name: 'Café Frappuccino',
+          price: 9.50
+        };
+        break;
+      case 6:
+        item = {
+          name: 'Café Macchiato',
+          price: 6.00
+        };
+        break;
+      case 7:
+        item = {
+          name: 'Café Gelado',
+          price: 5.00
+        };
+        break;
+      case 8:
+        item = {
+          name: 'Café com Leite',
+          price: 4.50
+        };
+        break;
+      case 9:
+        item = {
+          name: 'Café Descafeinado',
+          price: 5.50
+        };
+        break;
+      case 10:
+        item = {
+          name: 'Café Americano',
+          price: 4.00
+        };
+        break;
+    }
+
+    // Cria um elemento <li> para exibir o item no carrinho
+    var listItem = document.createElement('li');
+    listItem.textContent = item.name + ' - R$ ' + item.price.toFixed(2);
+
+    // Adiciona o item ao carrinho
+    var cartItems = document.getElementById('cart-items');
+    cartItems.appendChild(listItem);
+
+    // Atualiza o total do carrinho
+    var cartTotal = document.getElementById('cart-total');
+    var currentTotal = parseFloat(cartTotal.textContent);
+    var newTotal = currentTotal + item.price;
+    cartTotal.textContent = newTotal.toFixed(2);
+  }
+
+  // Adiciona o evento de clique aos botões "Comprar"
+  var addButtons = document.getElementsByClassName('add-btn');
+  for (var i = 0; i < addButtons.length; i++) {
+    addButtons[i].addEventListener('Desculpe, mas parece que houve um problema de formatação na resposta anterior. Aqui está o código corrigido para adicionar um carrinho de compras aos itens do menu:
+
+```html
+<script>
+  // Função para adicionar um item ao carrinho
+  function addToCart(itemIndex) {
+    var item;
+    switch (itemIndex) {
+      case 1:
+        item = {
+          name: 'Café Expresso',
+          price: 5.00
+        };
+        break;
+      case 2:
+        item = {
+          name: 'Café Latte',
+          price: 7.50
+        };
+        break;
+      case 3:
+        item = {
+          name: 'Café Mocha',
+          price: 6.50
+        };
+        break;
+      case 4:
+        item = {
+          name: 'Café Cappuccino',
+          price: 8.00
+        };
+        break;
+      case 5:
+        item = {
+          name: 'Café Frappuccino',
+          price: 9.50
+        };
+        break;
+      case 6:
+        item = {
+          name: 'Café Macchiato',
+          price: 6.00
+        };
+        break;
+      case 7:
+        item = {
+          name: 'Café Gelado',
+          price: 5.00
+        };
+        break;
+      case 8:
+        item = {
+          name: 'Café com Leite',
+          price: 4.50
+        };
+        break;
+      case 9:
+        item = {
+          name: 'Café Descafeinado',
+          price: 5.50
+        };
+        break;
+      case 10:
+        item = {
+          name: 'Café Americano',
+          price: 4.00
+        };
+        break;
+    }
+
+    // Cria um elemento <li> para exibir o item no carrinho
+    var listItem = document.createElement('li');
+    listItem.textContent = item.name + ' - R$ ' + item.price.toFixed(2);
+
+    // Adiciona o item ao carrinho
+    var cartItems = document.getElementById('cart-items');
+    cartItems.appendChild(listItem);
+
+    // Atualiza o total do carrinho
+    var cartTotal = document.getElementById('cart-total');
+    var currentTotal = parseFloat(cartTotal.textContent);
+    var newTotal = currentTotal + item.price;
+    cartTotal.textContent = newTotal.toFixed(2);
+  }
+
+  // Adiciona o evento de clique aos botões "Comprar"
+  var addButtons = document.getElementsByClassName('add-btn');
+  for (var i = 0; i < addButtons.length; i++) {
+    addButtons[i].addEventListener('click', function(event) {
+      var itemIndex = parseInt(event.target.getAttribute('data-index'));
+      addToCart(itemIndex);
+    });
+  }
+</script>
+            
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
   

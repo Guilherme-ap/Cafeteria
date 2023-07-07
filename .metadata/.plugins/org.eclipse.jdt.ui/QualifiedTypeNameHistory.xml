@@ -5,6 +5,10 @@
     <fullyQualifiedTypeName name="javax.sound.midi.Soundbank"/>
     <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="Controller.UsuarioController"/>
-    <fullyQualifiedTypeName name="Model.Usuario"/>
     <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="Model.Usuario"/>
+    <fullyQualifiedTypeName name="javax.mail.FetchProfile.Item"/>
+    <fullyQualifiedTypeName name="Controller.LoginController"/>
+    <fullyQualifiedTypeName name="Controller.PaymentController"/>
 </qualifiedTypeNameHistroy>
